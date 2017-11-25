@@ -6,14 +6,14 @@ public class baseBall implements GetDailyPractice{
 	private String name;
 	private int no;
 	
+	public baseBall(GetDailyFortune fortune) {
+		thefortune = fortune;
+	}
+	
 	@Override
 	public String getDailyPractice() {
 		
 		return "try hitting a home run";
-	}
-
-	public void setThefortune(GetDailyFortune thefortune) {
-		this.thefortune = thefortune;
 	}
 
 	public String getThefortune() {

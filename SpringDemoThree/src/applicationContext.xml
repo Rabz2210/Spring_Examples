@@ -10,14 +10,14 @@
     <!-- define the dependency -->
     <bean id="bB"
     		class="com.Spring.baseBall">
-    		<property name="thefortune" ref="Fs"/>
+    		<constructor-arg ref="Fs"/>
     		<property name="no" value="008"/>
     		<property name="name" value="James"/>
     </bean>
     
     <bean id="cC"
     		class="com.Spring.Cricket">
-    		<property name="thefortune" ref="Fs"/>
+    		<constructor-arg ref="Fs"/>
     		<property name="no" value="007"/>
     		<property name="name" value="Bond"/>
     </bean>

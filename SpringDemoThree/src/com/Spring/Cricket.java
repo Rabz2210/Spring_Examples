@@ -6,18 +6,17 @@ public class Cricket implements GetDailyPractice{
 	private String name;
 	private int no;
 	
+	public Cricket (GetDailyFortune fortune) {
+		
+		thefortune = fortune;
+	}
+	
 	@Override
 	public String getDailyPractice() {
 	
 		return "Try hitting a six";
 	}
 	
-	public void setThefortune(GetDailyFortune thefortune) {
-		this.thefortune = thefortune;
-	}
-
-
-
 	public String getThefortune() {
 		return thefortune.getDailyFortune()+"For CRICKET";
 	}
