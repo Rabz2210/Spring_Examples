@@ -7,19 +7,23 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+    <!-- loading properties file -->
+    
+    <context:property-placeholder location="classpath:information.properties"/> 
+    
     <!-- define the dependency -->
     <bean id="bB"
     		class="com.Spring.baseBall">
     		<constructor-arg ref="Fs"/>
-    		<property name="no" value="008"/>
-    		<property name="name" value="James"/>
+    		<property name="no" value="${foo.nobase}"/>
+    		<property name="name" value="${foo.namebase}"/>
     </bean>
     
     <bean id="cC"
     		class="com.Spring.Cricket">
     		<constructor-arg ref="Fs"/>
-    		<property name="no" value="007"/>
-    		<property name="name" value="Bond"/>
+    		<property name="no" value="${foo.nocrick}"/>
+    		<property name="name" value="${foo.namecrick}"/>
     </bean>
     <bean id="Fs"
     		class="com.Spring.DailyFortune">
