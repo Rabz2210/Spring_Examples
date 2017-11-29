@@ -1,14 +1,20 @@
 package com.Spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component("cricket")
 public class Cricket implements GetDailyPractice{
 
+	@Autowired
+	@Qualifier("weeklyfortune")
 	private GetDailyFortune thefortune;
-	private String name;
-	private int no;
 	
-	public Cricket (GetDailyFortune fortune) {
+	
+	public Cricket () {
 		
-		thefortune = fortune;
+		System.out.println("inside default constructor of cricket");
 	}
 	
 	@Override
@@ -20,19 +26,5 @@ public class Cricket implements GetDailyPractice{
 	public String getThefortune() {
 		return thefortune.getDailyFortune()+"For CRICKET";
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getNo() {
-		return no;
-	}
-	public void setNo(int no) {
-		this.no = no;
-	}
-	
-	
 
 }

@@ -2,14 +2,13 @@ package com.Spring;
 
 import org.springframework.stereotype.Component;
 
-@Component("dailyfortune")
-public class DailyFortune implements GetDailyFortune{
+@Component("weeklyfortune")
+public class WeeklyFortune implements GetDailyFortune {
 
 	@Override
 	public String getDailyFortune() {
 	
-		return "Daily Fortune Service in Action";
+		return "today is your un-lucky day";
 	}
-	
 
 }
